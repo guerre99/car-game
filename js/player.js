@@ -11,10 +11,10 @@ class Player {
 		this.img.frameIndex = 0
 		this.img.frames = 3
 
-		this.x = canvasW * 0.44
+		this.x = canvasW * 0.33
 		this.y = canvasH * 0.70
 
-		this.vx = 3
+		this.vx = 7
 
 		this.w = 178
 		this.h = 194

@@ -1,20 +1,25 @@
 class Obstacle {
-	constructor(ctx, canvasH, playerX, playerW) {
+	constructor(ctx, canvasH) {
 		this.ctx = ctx
 		this.canvasH = canvasH
 
-		this.w = 20
-		this.h = 50
+		this.img = new Image()
+		this.img.src = 'assets/car.png'
 
-		this.y = 0
-		this.x = playerX + (playerW/2)	
+		this.w = 100
+		this.h = 100
+
+		function getRndInteger(min, max) {
+			return Math.floor(Math.random() * (max - min) ) + min;
+		}
+		
+		this.y = 0 - this.h
+		this.x = getRndInteger(50,370)
 		this.dy = 10
 	}
 
 	draw() {
-		this.ctx.drawImage()
-		// fillStyle = 'black'
-		// this.ctx.fillRect(this.x, this.y, this.w, this.h)
+		this.ctx.drawImage(this.img,this.x,this.y,this.w,this.h)		
 	}
 
 	move() {
